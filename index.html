@@ -30,6 +30,12 @@
 </head>
 <body>
 
+
+	<div class="language-selector">
+        <button onclick="changeLanguage('es')" class="lang-btn">🇪🇸 ES</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">🇬🇧 EN</button>
+    </div>
+
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
 			<div class="site-mobile-menu-close">
@@ -48,29 +54,21 @@
 						<a href="index.html" class="logo m-0 float-start">Riviera Maya Travel</a>
 					</div>
 					<div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
-						<ul class="js-clone-nav  text-center site-menu p-0 m-0">
-							<li class="active"><a href="index.html">Inicio</a></li>
-							<li><a href="index.html">Nosotros</a></li>
+						<ul class="js-clone-nav text-center site-menu p-0 m-0">
+							<li><a href="#" data-i18n="nav_home">Inicio</a></li>
+							<li><a href="index.html" data-i18n="nav_about">Nosotros</a></li>
 							<li class="has-children">
-								<a href="#">Destinos/a>
+								<a href="#" data-i18n="nav_destinations">Destinos</a>
 								<ul class="dropdown">
-									<li><a href="#">Cancún</a></li>
-									<li><a href="#">Playa del Carmen</a></li>
-									<li><a href="#">Tulum</a></li>
-									<li><a href="#">Cozumel</a></li>
-									<!-- <li class="has-children">
-										<a href="#">Menu Two</a>
-										<ul class="dropdown">
-											<li><a href="#">Sub Menu One</a></li>
-											<li><a href="#">Sub Menu Two</a></li>
-											<li><a href="#">Sub Menu Three</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Menu Three</a></li>-->
+									<li><a href="#" data-i18n="destination_cancun">Cancún</a></li>
+									<li><a href="#" data-i18n="destination_playa">Playa del Carmen</a></li>
+									<li><a href="#" data-i18n="destination_tulum">Tulum</a></li>
+									<li><a href="#" data-i18n="destination_cozumel">Cozumel</a></li>
 								</ul>
 							</li>
-							<li><a href="index.html">Tours</a></li>
-							<li><a href="index.html">Blog</a></li>
+							<li><a href="index.html" data-i18n="nav_tours">Tours</a></li>
+							<li><a href="index.html" data-i18n="nav_blog">Blog</a></li>
+						</ul>
 
 						</ul>
 					</div>
@@ -711,5 +709,8 @@
 		<script src="js/flatpickr.js"></script>
 		<script src="js/glightbox.min.js"></script>
 		<script src="js/custom.js"></script>
+		<!-- Agregar antes del cierre del body -->
+		<script src="js/translations.js"></script>
+		<script src="js/languageManager.js"></script>
 	</body>
 	</html>
