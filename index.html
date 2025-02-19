@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,15 +25,16 @@
 	<link rel="stylesheet" href="css/style.css">
 
 
-	<title> &mdash; Riviera Maya Travel </title>
+	<title data-i18n="site_title">Riviera Maya Travel</title>
 </head>
 <body>
 
 
-	<div class="language-selector">
-        <button onclick="changeLanguage('es')" class="lang-btn">🇪🇸 ES</button>
-        <button onclick="changeLanguage('en')" class="lang-btn">🇬🇧 EN</button>
-    </div>
+	<div class="language-switcher">
+		<!-- Cambiado para usar addEventListener en lugar de onclick -->
+		<button class="btn btn-language" data-language="es">ES</button>
+		<button class="btn btn-language" data-language="en">EN</button>
+	</div>
 
 	<div class="site-mobile-menu site-navbar-target">
 		<div class="site-mobile-menu-header">
@@ -99,15 +99,14 @@
 			<div class="row align-items-center justify-content-start">
 				<div class="col-lg-5">
 
-					<h1 class="heading" data-aos="fade-up">Descubre el Paraíso en la Riviera Maya</h1>
-					<p class="mb-5" data-aos="fade-up">Explora las hermosas playas de arena blanca, cenotes cristalinos, sitios arqueológicos mayas y una vibrante cultura local. Tu aventura caribeña perfecta comienza aquí.</p>
-
-					<div data-aos="fade-up">
-						<a href="https://www.youtube.com/watch?v=8mib5qMKCQg" class="play-button align-items-center d-flex glightbox3" >
+					<h1 class="heading" data-aos="fade-up" data-i18n="hero_title">Descubre el Paraíso en la Riviera Maya</h1>
+						<p class="mb-5" data-aos="fade-up" data-i18n="hero_description">Explora las hermosas playas de arena blanca, cenotes cristalinos, sitios arqueológicos mayas y una vibrante cultura local. Tu aventura caribeña perfecta comienza aquí.</p>
+						<a href="#" class="play-button align-items-center d-flex glightbox3">
 							<span class="icon-button me-3">
 								<span class="icon-play"></span>
 							</span>
-							<span class="caption">Ver Video</span>
+							<span class="caption" data-i18n="watch_video">Ver Video</span>
+						</a>
 						</a>
 					</div>
 				</div>
@@ -137,15 +136,10 @@
 				<div class="col-lg-4 order-lg-1">
 
 					<div>
-						<h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">Descubre el Paraíso Maya con Nosotros</h2>
-					
-						<p data-aos="fade-up" data-aos-delay="200">La Riviera Maya, un tesoro del Caribe mexicano, te espera con sus playas de arena blanca, aguas turquesas cristalinas y una rica herencia cultural. Desde las antiguas ruinas mayas hasta los cenotes místicos, cada rincón cuenta una historia única.</p>
-					
-						<p data-aos="fade-up" data-aos-delay="300">Déjate cautivar por la magia de Tulum, la energía de Playa del Carmen y el lujo de Cancún. Nuestros expertos locales te guiarán a través de experiencias inolvidables: buceo en arrecifes de coral, exploración de cenotes sagrados, visitas a sitios arqueológicos ancestrales y la vibrante gastronomía mexicana.</p>
-					
-						<p class="my-4" data-aos="fade-up" data-aos-delay="300">
-							<a href="#destinos" class="btn btn-primary">Explorar Destinos</a>
-						</p>
+						<h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100" data-i18n="discover_heading">Descubre el Paraíso Maya con Nosotros</h2>
+						<p data-aos="fade-up" data-aos-delay="200" data-i18n="discover_p1">La Riviera Maya, un tesoro del Caribe mexicano, te espera con sus playas de arena blanca, aguas turquesas cristalinas y una rica herencia cultural. Desde las antiguas ruinas mayas hasta los cenotes místicos, cada rincón cuenta una historia única.</p>
+						<p data-aos="fade-up" data-aos-delay="300" data-i18n="discover_p2">Déjate cautivar por la magia de Tulum, la energía de Playa del Carmen y el lujo de Cancún. Nuestros expertos locales te guiarán a través de experiencias inolvidables: buceo en arrecifes de coral, exploración de cenotes sagrados, visitas a sitios arqueológicos ancestrales y la vibrante gastronomía mexicana.</p>
+						<a href="#destinos" class="btn btn-primary" data-i18n="explore_destinations">Explorar Destinos</a>
 					</div>
 				</div>
 				
@@ -160,9 +154,11 @@
 
 				<div class="col-lg-3 mb-4 mb-lg-0">
 					<div class="heading-content" data-aos="fade-up">
-						<h2>Nuestros <span class="d-block">Servicios</span></h2>
-						<p>Ofrecemos experiencias únicas y memorables en la Riviera Maya, con atención personalizada y los mejores guías locales.</p>
-						<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">Ver Todo</a></p>
+						<h2 data-i18n="services_title">Nuestros <span class="d-block">Servicios</span></h2>
+						<p data-i18n="services_description">Ofrecemos experiencias únicas y memorables en la Riviera Maya, con atención personalizada y los mejores guías locales.</p>
+						<p class="my-4" data-aos="fade-up" data-aos-delay="300">
+							<a href="#" class="btn btn-primary" data-i18n="view_all">Ver Todo</a>
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-9">
@@ -173,8 +169,8 @@
 									<img src="images/svg/01.svg" alt="Image" class="img-fluid">
 								</span>
 								<div>
-									<h3>Tours de Playa</h3>
-									<p>Explora las mejores playas de la Riviera Maya, desde Cancún hasta Tulum.</p>
+									<h3 data-i18n="service_title_1">Tours de Playa</h3>
+									<p data-i18n="service_desc_1">Explora las mejores playas...</p>
 								</div>
 							</div>
 						</div>
@@ -184,8 +180,8 @@
 									<img src="images/svg/02.svg" alt="Image" class="img-fluid">
 								</span>
 								<div>
-									<h3>Tours Arqueológicos</h3>
-									<p>Visita las impresionantes ruinas mayas como Tulum, Cobá y Chichén Itzá.</p>
+									<h3 data-i18n="service_title_2">Tours Arqueológicos</h3>
+									<p data-i18n="service_desc_2">Visita las impresionantes ruinas...</p>
 								</div>
 							</div>
 						</div>
@@ -195,8 +191,8 @@
 									<img src="images/svg/03.svg" alt="Image" class="img-fluid">
 								</span>
 								<div>
-									<h3>Tours de Cenotes</h3>
-									<p>Sumérgete en las cristalinas aguas de los cenotes más espectaculares.</p>
+									<h3 data-i18n="service_title_3">Tours de Cenotes</h3>
+									<p data-i18n="service_desc_3">Sumérgete en las cristalinas aguas...</p>
 								</div>
 							</div>
 						</div>
@@ -206,8 +202,8 @@
 									<img src="images/svg/04.svg" alt="Image" class="img-fluid">
 								</span>
 								<div>
-									<h3>Tours Culturales</h3>
-									<p>Descubre la rica cultura maya y las tradiciones locales de la región.</p>
+									<h3 data-i18n="service_title_4">Tours Culturales</h3>
+									<p data-i18n="service_desc_4">Descubre la rica cultura maya...</p>
 								</div>
 							</div>
 						</div>
@@ -222,8 +218,8 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between  mb-5">
 				<div class="col-lg-5" data-aos="fade-up">
-					<h2 class="heading mb-3">Descubre los Tesoros de la Riviera Maya</h2>
-					<p>Explora más de 120 kilómetros de paraíso costero, desde las playas de Cancún hasta las ruinas de Tulum. La Riviera Maya ofrece una diversidad única de experiencias: cenotes místicos, sitios arqueológicos milenarios, parques naturales, pueblos mágicos y las mejores playas del Caribe mexicano. Cada destino tiene su propia historia y encanto esperando ser descubierto.</p>
+					<h2 class="heading mb-3" data-i18n="treasures_title">Descubre los Tesoros de la Riviera Maya</h2>
+					<p data-i18n="treasures_description">Explora más de 120 kilómetros de paraíso costero, desde las playas de Cancún hasta las ruinas de Tulum. La Riviera Maya ofrece una diversidad única de experiencias: cenotes místicos, sitios arqueológicos milenarios, parques naturales, pueblos mágicos y las mejores playas del Caribe mexicano. Cada destino tiene su propia historia y encanto esperando ser descubierto.</p>
 				</div>		
 				<div class="col-lg-5 text-md-end" data-aos="fade-up" data-aos-delay="100">
 					<div id="destination-controls">
@@ -344,9 +340,9 @@
 					<img src="images/img-1.jpg" alt="Image" class="img-fluid">
 				</div>
 				<div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
-					<h2 class="heading mb-4">Crea Recuerdos Inolvidables en el Paraíso</h2>
-					<p>Imagina despertar con el sonido de las olas del Caribe, explorar antiguos templos mayas rodeados de selva tropical, y nadar en las aguas cristalinas de cenotes sagrados. En la Riviera Maya, cada momento se convierte en un recuerdo que atesorarás para siempre.</p>
-					<p>Desde románticas puestas de sol en las playas de arena blanca, hasta emocionantes aventuras en parques acuáticos, pasando por experiencias culturales únicas y degustación de la exquisita gastronomía mexicana. Cada día trae nuevas aventuras y momentos mágicos para compartir con tus seres queridos.</p>
+					<h2 class="heading mb-4" data-i18n="memories_title">Crea Recuerdos Inolvidables en el Paraíso</h2>
+					<p data-i18n="memories_p1">Imagina despertar con el sonido de las olas del Caribe, explorar antiguos templos mayas rodeados de selva tropical, y nadar en las aguas cristalinas de cenotes sagrados. En la Riviera Maya, cada momento se convierte en un recuerdo que atesorarás para siempre.</p>
+						<p data-i18n="memories_p2">Desde románticas puestas de sol en las playas de arena blanca, hasta emocionantes aventuras en parques acuáticos, pasando por experiencias culturales únicas y degustación de la exquisita gastronomía mexicana. Cada día trae nuevas aventuras y momentos mágicos para compartir con tus seres queridos.</p>
 					<p class="my-4" data-aos="fade-up" data-aos-delay="200">
 						<a href="#experiencias" class="btn btn-primary">Descubre Más</a>
 					</p>
@@ -356,7 +352,7 @@
 	</div>
 
 	<div class="section bg-light">
-		<h2 class="heading mb-5 text-center">Testimonios</h2>
+		<h2 class="heading mb-5 text-center" data-i18n="testimonials_title">Testimonios</h2>
 	
 		<div class="text-center mb-5">
 			<div id="prevnext-testimonial">
@@ -376,12 +372,12 @@
 					<blockquote class="block-testimonial">
 						<div class="author">
 							<img src="images/person_1.jpg" alt="Testimonio de cliente">
-							<h3>María González</h3>
-							<p class="position mb-5">Turista de Argentina</p>
+							<h3 data-i18n="testimonial_1_author">María González</h3>
+							<p class="position mb-5" data-i18n="testimonial_1_position">Turista de Argentina</p>
 						</div>
 						<p>
 							<div class="quote">&ldquo;</div>
-							"¡Una experiencia inolvidable en Tulum! El servicio de la agencia fue excepcional desde el primer contacto. Las playas cristalinas, los cenotes místicos y la cultura maya nos dejaron maravillados. Definitivamente volveremos a confiar en esta agencia para nuestras próximas vacaciones en la Riviera Maya."
+							<span data-i18n="testimonial_1_text">¡Una experiencia inolvidable en Tulum! El servicio de la agencia fue excepcional desde el primer contacto...</span>
 						</p>
 					</blockquote>
 				</div>
@@ -436,12 +432,12 @@
 					<blockquote class="block-testimonial">
 						<div class="author">
 							<img src="images/person_2.jpg" alt="Testimonio de cliente">
-							<h3>Ana Silva</h3>
-							<p class="position mb-5">Turista de Brasil</p>
+							<h3 data-i18n="testimonial_5_author">Ana Silva</h3>
+							<p class="position mb-5" data-i18n="testimonial_5_position">Turista de Brasil</p>
 						</div>
 						<p>
 							<div class="quote">&ldquo;</div>
-							"Viajamos en familia y la agencia pensó en todo: actividades para niños, excursiones seguras y hoteles familiares. La visita a Xcaret fue mágica y las playas de la Riviera Maya son un verdadero paraíso. ¡Volveremos pronto!"
+							<span data-i18n="testimonial_5_text">Viajamos en familia...</span>
 						</p>
 					</blockquote>
 				</div>
@@ -451,12 +447,12 @@
 					<blockquote class="block-testimonial">
 						<div class="author">
 							<img src="images/person_3.jpg" alt="Testimonio de cliente">
-							<h3>David Chen</h3>
-							<p class="position mb-5">Viajero de Canadá</p>
+							<h3 data-i18n="testimonial_6_author">David Chen</h3>
+							<p class="position mb-5" data-i18n="testimonial_6_position">Viajero de Canadá</p>
 						</div>
 						<p>
 							<div class="quote">&ldquo;</div>
-							"Una experiencia auténtica en la Riviera Maya. Desde la gastronomía local hasta las actividades culturales, todo fue perfecto. El personal de la agencia nos ayudó a descubrir los tesoros ocultos de la región. ¡Experiencia cinco estrellas!"
+							<span data-i18n="testimonial_6_text">Una experiencia auténtica...</span>
 						</p>
 					</blockquote>
 				</div>
@@ -472,16 +468,16 @@
 				</div>
 				<div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
 
-					<h2 class="heading mb-5">Preguntas <br> Frecuentes</h2>
+					<h2 class="heading mb-5" data-i18n="faq_section_title">Preguntas <br> Frecuentes</h2>
 				
 					<div class="custom-accordion" id="accordion_1">
 						<div class="accordion-item">
 							<h2 class="mb-0">
-								<button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">¿Cómo reservo un paquete turístico?</button>
+								<button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-i18n="faq_booking_title">¿Cómo reservo un paquete turístico?</button>
 							</h2>
 				
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion_1">
-								<div class="accordion-body">
+								<div class="accordion-body" data-i18n="faq_booking_answer">
 									Reservar con nosotros es muy sencillo. Puede hacerlo directamente a través de nuestra página web, llamando a nuestro número de atención al cliente, o enviándonos un correo electrónico. Aceptamos diversos métodos de pago incluyendo tarjetas de crédito, transferencias bancarias y PayPal. Además, ofrecemos la opción de pago en cuotas para hacer sus vacaciones más accesibles.
 								</div>
 							</div>
@@ -489,10 +485,10 @@
 				
 						<div class="accordion-item">
 							<h2 class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">¿Qué incluyen los paquetes todo incluido?</button>
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-i18n="faq_inclusive_title">¿Qué incluyen los paquetes todo incluido?</button>
 							</h2>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion_1">
-								<div class="accordion-body">
+								<div class="accordion-body" data-i18n="faq_inclusive_answer">
 									Nuestros paquetes todo incluido contemplan: alojamiento en hoteles seleccionados, todas las comidas y bebidas, traslados desde/hacia el aeropuerto, acceso a las instalaciones del hotel, actividades recreativas y entretenimiento nocturno. Algunos paquetes premium incluyen excursiones a sitios arqueológicos, parques temáticos y tours en cenotes. Cada paquete está detallado con sus inclusiones específicas.
 								</div>
 							</div>
@@ -500,11 +496,11 @@
 				
 						<div class="accordion-item">
 							<h2 class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">¿Cuál es la mejor época para visitar la Riviera Maya?</button>
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-i18n="faq_season_title">¿Cuál es la mejor época para visitar la Riviera Maya?</button>
 							</h2>
 				
 							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion_1">
-								<div class="accordion-body">
+								<div class="accordion-body" data-i18n="faq_season_answer">
 									La Riviera Maya se puede disfrutar todo el año, pero la temporada más popular es de noviembre a abril, cuando el clima es más templado y hay menos probabilidad de lluvia. La temporada baja es de mayo a octubre, con precios más económicos pero con posibilidad de lluvias breves por la tarde. Para evitar la temporada de huracanes, recomendamos evitar viajar entre septiembre y octubre.
 								</div>
 							</div>
@@ -513,11 +509,11 @@
 				
 						<div class="accordion-item">
 							<h2 class="mb-0">
-								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">¿Por qué elegir nuestra agencia?</button>
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" data-i18n="faq_why_us_title">¿Por qué elegir nuestra agencia?</button>
 							</h2>
 				
 							<div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion_1">
-								<div class="accordion-body">
+								<div class="accordion-body" data-i18n="faq_why_us_answer">
 									Contamos con más de 15 años de experiencia en la Riviera Maya, personal local altamente capacitado y relaciones directas con los mejores hoteles y proveedores de servicios turísticos. Ofrecemos atención personalizada 24/7, garantía de mejor precio y flexibilidad en cambios de reserva. Nuestros guías son bilingües certificados y expertos en la cultura maya. Además, contribuimos al turismo sostenible y apoyamos a las comunidades locales.
 								</div>
 							</div>
@@ -537,7 +533,7 @@
 			<div class="row">
 				<div class="col-12"data-aos="fade-up" data-aos-delay="0">
 					
-					<h2 class="heading mb-5">Post Recientes</h2>
+					<h2 class="heading mb-5" data-i18n="blog_section_title">Recent Posts</h2>
 				</div>
 			</div>
 			<div class="row align-items-stretch">
@@ -548,11 +544,11 @@
 						</a>
 						<div class="bg-white m-body">
 							<span class="date">6 Feb, 2025</span>
-							<h3><a href="#">Tulum: Donde la Historia se Encuentra con el Mar Caribe</a></h3>
-							<p>Descubre las majestuosas ruinas mayas de Tulum, ubicadas en un acantilado con vistas impresionantes al Mar Caribe.</p>
+							<h3><a href="#" data-i18n="blog_tulum_title">Tulum: Where History Meets the Caribbean Sea</a></h3>
+							<p data-i18n="blog_tulum_desc">Discover the majestic Mayan ruins...</p>
 			
 							<a href="index.html" class="more d-flex align-items-center float-start">
-								<span class="label">Leer Más</span>
+								<span class="label" data-i18n="blog_read_more">Read More</span>
 								<span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
 							</a>
 						</div>
@@ -565,8 +561,8 @@
 						</a>
 						<div class="bg-white m-body">
 							<span class="date">6 Feb, 2025</span>
-							<h3><a href="#">Cenotes Mágicos: Los Tesoros Subterráneos Mayas</a></h3>
-							<p>Explora los místicos cenotes de la Riviera Maya, piscinas naturales subterráneas consideradas sagradas por los mayas.</p>
+							<h3><a href="#" data-i18n="blog_cenotes_title">Cenotes Mágicos: Los Tesoros Subterráneos Mayas</a></h3>
+							<p data-i18n="blog_cenotes_desc">Explora los místicos cenotes de la Riviera Maya, piscinas naturales subterráneas consideradas sagradas por los mayas.</p>
 			
 							<a href="index.html" class="more d-flex align-items-center float-start">
 								<span class="label">Leer Más</span>
@@ -582,8 +578,8 @@
 						</a>
 						<div class="bg-white m-body">
 							<span class="date">6 Feb, 2025</span>
-							<h3><a href="#">Quinta Avenida: El Corazón de Playa del Carmen</a></h3>
-							<p>Pasea por la famosa Quinta Avenida, donde encontrarás tiendas, restaurantes y la vibrante vida nocturna de la Riviera Maya.</p>
+							<h3><a href="#" data-i18n="blog_playa_title">Quinta Avenida: El Corazón de Playa del Carmen</a></h3>
+							<p data-i18n="blog_playa_desc">Pasea por la famosa Quinta Avenida, donde encontrarás tiendas, restaurantes y la vibrante vida nocturna de la Riviera Maya.</p>
 							<a href="index.html" class="more d-flex align-items-center float-start">
 								<span class="label">Leer Más</span>
 								<span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
@@ -598,8 +594,8 @@
 						</a>
 						<div class="bg-white m-body">
 							<span class="date">6 Feb, 2025</span>
-							<h3><a href="#">Xcaret: Un Paraíso de Cultura y Naturaleza</a></h3>
-							<p>Vive la magia de Xcaret, donde la cultura maya, shows espectaculares y la naturaleza se fusionan en perfecta armonía.</p>
+							<h3><a href="#" data-i18n="blog_xcaret_title">Xcaret: Un Paraíso de Cultura y Naturaleza</a></h3>
+							<p data-i18n="blog_xcaret_desc">Vive la magia de Xcaret, donde la cultura maya, shows espectaculares y la naturaleza se fusionan en perfecta armonía.</p>
 							<a href="index.html" class="more d-flex align-items-center float-start">
 								<span class="label">Leer Más</span>
 								<span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
@@ -617,10 +613,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
-					<h3 class="text-white m-0">Inicia tu aventura con nosotros.</h3>
+					<h3 class="text-white m-0" data-i18n="adventure_start">Inicia tu aventura con nosotros.</h3>
 				</div>		
 				<div class="col-lg-5 text-center text-lg-end">
-					<a href="#" class="btn btn-outline-white">Aventúrate</a>
+					<a href="#" class="btn btn-outline-white" data-i18n="adventure_button">Aventúrate</a>
 				</div>
 			</div>		
 		</div>		
@@ -632,11 +628,11 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="widget">
-						<h3>Sobre Riviera Maya Travel<span class="text-primary">.</span> </h3>
-						<p>Somos expertos en crear experiencias únicas en la Riviera Maya. Nuestro compromiso es hacer de tus vacaciones una aventura inolvidable en el paraíso mexicano.</p>
-					</div> <!-- /.widget -->
+						<h3 data-i18n="footer_about_title">Sobre Riviera Maya Travel<span class="text-primary">.</span></h3>
+						<p data-i18n="footer_about_text">Somos expertos en crear experiencias únicas en la Riviera Maya. Nuestro compromiso es hacer de tus vacaciones una aventura inolvidable en el paraíso mexicano.</p>
+					</div>
 					<div class="widget">
-						<h3>Contacto</h3>
+						<h3 data-i18n="footer_contact_title">Contacto</h3>
 						<ul class="list-unstyled social">
 							<li><a href="#"><span class="icon-instagram"></span></a></li>
 							<li><a href="#"><span class="icon-twitter"></span></a></li>
@@ -650,10 +646,10 @@
 
 				<div class="col-lg-2 ml-auto">
 					<div class="widget">
-						<h3>Enlaces</h3>
+						<h3 data-i18n="footer_links_title">Enlaces</h3>
 						<ul class="list-unstyled float-left links">
-							<li><a href="#">Nosotros</a></li>
-							<li><a href="#">Servicios</a></li>
+							<li><a href="#" data-i18n="footer_link_about">Nosotros</a></li>
+							<li><a href="#" data-i18n="footer_link_services">Servicios</a></li>
 							<!-- <li><a href="#">News</a></li>
 							<li><a href="#">Careers</a></li>
 							<li><a href="#">Contact</a></li>-->
@@ -677,8 +673,8 @@
 
 				<div class="col-lg-3">
 					<div class="widget">
-						<h3>Contacto</h3>
-						<address>Av. 5ta Norte, Playa del Carmen, Q.R., México</address>
+						<h3 data-i18n="footer_contact_title">Contacto</h3>
+						<address data-i18n="footer_address">Av. 5ta Norte, Playa del Carmen, Q.R., México</address>
 						<ul class="list-unstyled links mb-4">
 							<li><a href="tel://11234567890">+52 (984) 123-4567</a></li>
 							<li><a href="tel://11234567890">+52 (984) 123-4567</a></li>
@@ -695,7 +691,7 @@
 		<div id="overlayer"></div>
 		<div class="loader">
 			<div class="spinner-border text-primary" role="status">
-				<span class="visually-hidden">Cargando...</span>
+				<span class="visually-hidden" data-i18n="loading">Loading...</span>
 			</div>
 		</div>
 
@@ -711,6 +707,6 @@
 		<script src="js/custom.js"></script>
 		<!-- Agregar antes del cierre del body -->
 		<script src="js/translations.js"></script>
-		<script src="js/languageManager.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 	</html>

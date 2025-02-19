@@ -10485,23 +10485,35 @@ textarea {
         background: #f59b74;
         color: #fff; }
 
-        .language-selector {
-          position: fixed;
-          top: 20px;
-          right: 20px;
-          z-index: 1000;
-      }
-      
-      .lang-btn {
-          padding: 8px 12px;
-          margin: 0 5px;
-          border: none;
-          border-radius: 4px;
-          background-color: #f5f5f5;
-          cursor: pointer;
-          transition: background-color 0.3s;
-      }
-      
-      .lang-btn:hover {
-          background-color: #e0e0e0;
-      }
+
+
+/* Estilos para el language-switcher */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 5px;
+  background: transparent; /* Elimina el fondo blanco */
+}
+
+.btn-language {
+  padding: 5px 10px;
+  border: 1px solid var(--bs-primary);
+  background-color: transparent;
+  color: var(--bs-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-language:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* Para cuando el botón está activo/seleccionado */
+.btn-language.active {
+  background-color: var(--bs-primary);
+  color: white;
+}
